@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "qGWCwZZUYd2O26S/pBKt9HacIJjIaL51jpm1OZpsLZZwKxFg1Ez8B+WMnmM6c+4VFv2FVBGTHQty2v1RLzPzkA==",
+  "dgSpecHash": "C7OSbsuYwu3e0/UVFGjuxLmg0ea3UmUkiCqDveU/L7sYYTIjrAO5t5mOkoBrnfuG4ifQAWLNiEm2gBmijK0SxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\lacyr\\source\\repos\\MIS321\\mis321pa3\\mis321pa3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacyr\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\lacyr\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\lacyr\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.116\\stub.system.data.sqlite.core.netstandard.1.0.116.nupkg.sha512",
     "C:\\Users\\lacyr\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\lacyr\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\lacyr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\lacyr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\lacyr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "C:\\Users\\lacyr\\.nuget\\packages\\system.data.sqlite.core\\1.0.116\\system.data.sqlite.core.1.0.116.nupkg.sha512"
   ],
   "logs": []
 }
