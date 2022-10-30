@@ -1,3 +1,15 @@
+using mis321pa3.database;
+using mis321pa3.models;
+using mis321pa3.interfaces;
+using System;
+
+DeleteDriver.DropDriverTable();
+SaveDriver.CreateDriverTable();
+
+Driver myDriver = new Driver(){DriverName="Nick Saban"};
+
+myDriver.Save.CreateDriver(myDriver);
+//myDriver.Deleted.DeleteDriver(3);
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
