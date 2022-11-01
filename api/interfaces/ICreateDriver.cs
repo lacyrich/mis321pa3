@@ -1,9 +1,9 @@
 using mis321pa3.api.models;
 namespace mis321pa3.api.interfaces
 {
-    public interface ISaveDriver
+    //rename to create
+    public interface ICreateDriver
     {
         public void CreateDriver(Driver myDriver);
-        public void SaveDriver(Driver myDriver);
     }
 }

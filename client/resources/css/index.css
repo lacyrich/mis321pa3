@@ -1,0 +1,20 @@
+body {
+    background-color: navy;
+  }
+  
+  .main-container {
+    min-height: 100vh;
+    background-color: white;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #driversTable {
+    max-height: 100px;
+  }
+  
+  .table-row:hover {
+    cursor: pointer;
+  }

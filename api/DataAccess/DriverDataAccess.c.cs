@@ -10,18 +10,24 @@ namespace mis321pa3.api.DataAccess
             ConnectionString connectionString = new ConnectionString();
             string cs = connectionString.cs;
 
-            MySqlConnection con = new MySqlConnection();
+            MySqlConnection con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = "@SELECT * from drivers";
+            string stm = "SELECT * from drivers";
 
             MySqlCommand cmd = new MySqlCommand(stm, con);
             MySqlDataReader rdr = cmd.ExecuteReader();
 
             while(rdr.Read()){
-                System.Console.WriteLine(rdr.GetString(0)+ " " + rdr.GetInt32(1));
+                System.Console.WriteLine(rdr.GetInt32(0) + " " + rdr.GetString(1)+ " " + rdr.GetInt32(2)+ " " + rdr.GetDateTime(3) + " " + rdr.GetInt32(4));
                 Driver newDriver = new Driver()
-                {DriverName = rdr.GetString(0), Rating = rdr.GetInt32(1)};
+                {
+                    ID = rdr.GetInt32(0),
+                    DriverName = rdr.GetString(1),
+                    Rating = rdr.GetInt32(2),
+                    DateHired = rdr.GetDateTime(3),
+                    Deleted = rdr.GetInt32(4)
+                };
                 drivers.Add(newDriver);
             }
             con.Close();

@@ -3,16 +3,16 @@ using mis321pa3.api.interfaces;
 
 namespace mis321pa3.api.database
 {
-    public class DeleteDriver : IDeleteDriver
+    public class UpdateDriverRating : IUpdateDriverRating
     {
-        void IDeleteDriver.DeleteDriver(int id)
+        void IUpdateDriverRating.UpdateDriverRating(int id)
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE drivers SET isDeleted = 1 WHERE id = @id";
+            string stm = @"UPDATE drivers SET rating = 5 WHERE id = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -22,8 +22,5 @@ namespace mis321pa3.api.database
             
             cmd.ExecuteNonQuery();
         }
-        
-        
-
     }
 }

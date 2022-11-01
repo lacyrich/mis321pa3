@@ -4,21 +4,9 @@ using mis321pa3.api.models;
 
 namespace mis321pa3.api.database
 {
-    public class SaveDriver : ISaveDriver
+    public class CreateDriver : ICreateDriver
     {
-        public static void CreateDriverTable(){
-        ConnectionString myConnection = new ConnectionString();
-        string cs = myConnection.cs;
-        using var con = new MySqlConnection(cs);
-        con.Open();
-
-        string stm = @"CREATE TABLE drivers(id INTEGER PRIMARY KEY AUTO_INCREMENT, driverName TEXT, rating INTEGER, dateHired DATETIME, isDeleted INTEGER)";
-
-        using var cmd = new MySqlCommand(stm, con);
-
-        cmd.ExecuteNonQuery();
-    }
-        public void CreateDriver(Driver myDriver)
+       void ICreateDriver.CreateDriver(Driver myDriver)
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -38,13 +26,6 @@ namespace mis321pa3.api.database
             
             cmd.ExecuteNonQuery();
         }
-
-       
-        void ISaveDriver.SaveDriver(Driver myDriver)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        
     }
+    
 }
