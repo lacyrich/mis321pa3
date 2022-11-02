@@ -1,20 +1,32 @@
 body {
-    background-color: navy;
-  }
-  
-  .main-container {
-    min-height: 100vh;
-    background-color: white;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #driversTable {
-    max-height: 100px;
-  }
-  
-  .table-row:hover {
-    cursor: pointer;
-  }
+  background-color: crimson;
+}
+
+.main-container {
+  min-height: 100vh;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#driversTable {
+  max-height: 100px;
+}
+
+
+.table-row:hover {
+  cursor: pointer;
+}
+
+.carousel .carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 500px;
+}
