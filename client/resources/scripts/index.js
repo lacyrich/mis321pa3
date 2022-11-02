@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#driversTable").DataTable();
 });
-let app = document.getElementById("app");
+let drivers = document.getElementById("drivers");
 let taskCount = 0;
 //truthy and the ternary operator condition ? true : false
 /*let toDos = JSON.parse(localStorage.getItem("myToDos"))
@@ -9,10 +9,31 @@ let taskCount = 0;
   : [];
 */
 function handleOnLoad() {
-  createDriversTable();
+  getDrivers();
+  //createDriversTable();
 }
 
-function createDriversTable() {
+function getDrivers() {
+  const url = "https://localhost:5001/api/driver";
+  fetch(url)
+    .then(function (response) {
+      console.log(response);
+      return response.json();
+    })
+    .then(function (json) {
+      let html = "<ul>";
+      json.forEach((driver) => {
+        html += "<li>" + driver.name + driver.rating + "</li>";
+      });
+      html += "</ul>";
+      document.getElementById("drivers").innerHTML = html;
+      console.log(json);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+/*function createDriversTable() {
   const url = "https://localhost:5001/api/Driver";
   fetch(url)
     .then(function (response) {
