@@ -14,7 +14,7 @@ function handleOnLoad() {
 }
 
 function getDrivers() {
-  const url = "https://localhost:5001/api/driver";
+  const url = "https://bigalstaxiserviceapi.herokuapp.com/";
   fetch(url)
     .then(function (response) {
       console.log(response);
