@@ -14,8 +14,9 @@ function handleOnLoad() {
 }
 
 function getDrivers() {
-  const url = "https://bigalstaxiserviceapi.herokuapp.com/api/driver";
-  fetch(url)
+  const allDriversApiUrl =
+    "https://bigalstaxiserviceapi.herokuapp.com/api/driver";
+  fetch(allDriversApiUrl)
     .then(function (response) {
       console.log(response);
       return response.json();
