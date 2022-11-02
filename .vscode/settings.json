@@ -1,8 +1,0 @@
-{
-  "html.format.templating": true,
-  "auto-rename-tag.activationOnLanguage": [
-
-    "*"
-  ],
-  "php.validate.executablePath": ""
-}
