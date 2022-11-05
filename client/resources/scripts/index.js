@@ -190,9 +190,21 @@ function displayDriversTable() {
   /*$('#driversTable').DataTable({
     "order": [[ 3, "desc" ]], //or asc 
     "columnDefs" : [{"targets":3, "type":"date-eu"}],
-});*/
-  $(document).ready(function () {
+});*//*
+table = $('#driversTable').DataTable( {
+  
+  retrieve: true,
+  paging: false,
+  "order": [[ 3, "desc" ]], //or asc 
+  "columnDefs" : [{"targets":3, "type":"date-eu"}],
+} );*/
+ $(document).ready(function () {
     $("#driversTable").DataTable({
+  
+        retrieve: true,
+        paging: true,
+        "order": [[ 3, "desc" ]], //or asc 
+        "columnDefs" : [{"targets":3, "type":"date-eu"}],
       
     });
   });

@@ -35,7 +35,7 @@ body {
 .taxi{
   display: flex;
   max-height: 500px;
-  max-width: 700px;
+  max-width: 600px;
   justify-content: center;
 }
 #changeDriverTable{
@@ -43,6 +43,14 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+.btn{
+
+  background-color:#9E1B32;
+  border: none;
+}
+.cardSet{
+  min-height: 300px;
 }
 #driversTableAllData{
   max-height: 100px;
