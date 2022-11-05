@@ -1,5 +1,5 @@
 body {
-  background-color: crimson;
+  background-color: #9E1B32;
 }
 
 .main-container {
@@ -10,10 +10,43 @@ body {
   justify-content: center;
   align-items: center;
 }
+.header-container{
+  min-height: 20vh;
+  background-color: #828A8F;
+
+  text-align: center;
+  display: flex;
+  
+  align-items: center;
+}
+#pageHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-md-6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #driversTable {
   max-height: 100px;
 }
-
+.taxi{
+  display: flex;
+  max-height: 500px;
+  max-width: 700px;
+  justify-content: center;
+}
+#changeDriverTable{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#driversTableAllData{
+  max-height: 100px;
+}
 
 .table-row:hover {
   cursor: pointer;

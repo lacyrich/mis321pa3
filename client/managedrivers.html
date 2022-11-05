@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/vader/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./resources/css/index.css" />
+    <title>View Drivers</title>
+  </head>
+  <body onload="handleOnLoad()">
+    <script src="./resources/scripts/index.js"></script>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Big Al's Taxi Service</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./manageDrivers.html"
+                >Manage Drivers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <container class="container header-container">
+      <div id="main-heading" class="col-md-12">
+        <h1>Manage Big Al's Taxi Drivers</h1>
+      </div></container
+    >
+
+    <div class="container main-container">
+      <div class="manage">
+        <br />
+        <br />
+        <br />
+
+        <div id="changeDriverTable" class="col-md-12 container">
+          <div id="hireDriver" class="col-sm-3">
+            <h5>Enter the name of the driver you would like to hire</h5>
+            <form onsubmit="return false;" method="post">
+              <label for="driverName">Name: </label>
+              <input type="text" name="driverName" id="driverName" />
+              <input type="submit" value="Hire" onclick="postDriver()" />
+            </form>
+          </div>
+
+          <br />
+          <br />
+          <div id="updateRating" class="col-sm-6">
+            <h5>
+              Enter the id of the driver and the new rating of the driver whose
+              rating you wish to update
+            </h5>
+
+            <form onsubmit="return false;" method="put">
+              <label for="id">ID:</label
+              ><input type="text" name="id" id="id" /><label for="rating"
+                >New Rating:</label
+              ><input
+                type="number"
+                max="5"
+                min="0"
+                name="rating"
+                id="rating"
+              /><input type="submit" value="Rate" onclick="putDriver()" />
+            </form>
+          </div>
+
+          <br />
+          <br />
+          <div id="deleteDriver" class="col-sm-3">
+            <h5>Enter the id of the driver you would like to delete</h5>
+
+            <form onsubmit="return false;" method="put">
+              <label for="iddelete">ID: </label
+              ><input type="text" name="iddelete" id="iddelete" />
+              <input
+                type="submit"
+                name="deleteMe"
+                id="deleteMe"
+                value="Delete"
+                onclick="deleteDriver()"
+              />
+            </form>
+          </div>
+
+          <br />
+          <br />
+        </div>
+        <br />
+        <br />
+        <div class="col-md-12">
+          <div id="displayDrivers">
+            <div id="outer-table-resp" class="table-responsive">
+              <table
+                id="driversTable"
+                class="table table-border table-striped table-secondary table-hover text-lg-center text-black"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.jqueryui.min.js"></script>
+  </body>
+</html>
