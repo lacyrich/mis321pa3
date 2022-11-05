@@ -1,3 +1,2 @@
-<?php include_once("index.html");
-include_once("managedrivers.html");?>
+<?php include_once("index.html");?>
 
