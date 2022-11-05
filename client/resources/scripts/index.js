@@ -40,10 +40,11 @@ function postDriver() {
     }),
   }).then((response) => {
     setTimeout(() => {
-      document.getElementById("driverName").value = "";
+      window.location.reload(true);
+
     
       getDrivers();
-    }, 2000);
+    }, 1000);
     console.log(response);
   });
 }
@@ -73,11 +74,10 @@ async function putDriver() {
   }).then((response) => {
     console.log(response);
     setTimeout(() => {
-      document.getElementById("id").value = "";
-      document.getElementById("rating").value = "";
+      window.location.reload(true);
     
       getDrivers();
-    }, 2000);
+    }, 1000);
   });
 }
 
@@ -106,11 +106,10 @@ async function deleteDriver() {
   }).then((response) => {
     console.log(response);
     setTimeout(() => {
-      document.getElementById("iddelete").value = "";
-      document.getElementById("driversTable") = "";
+      window.location.reload(true);
     
       
-    }, 2000);
+    }, 1000);
     getDrivers();
   });
 }
@@ -120,17 +119,7 @@ function handleOnLoad() {
 }
 
 
-/*
-function createForm() {
-  masterDrivers.forEach((driver) => {
-    let html = "<form onsubmit='return false;' method='put'>";
-    html += "<label for='rating'>" + "New Rating" + "</label>";
-    html += `<input type='text' name='rating' id='${driver.id}rating' />`;
-    html += `<input type='submit' value='Submit' onclick='putDriver(${driver.id})' />`;
-    html += "</form>";
-    document.getElementById("rating").innerHTML = html;
-  });
-}*/
+
 
 function displayDriversTable() {
   //create header row
@@ -187,23 +176,13 @@ function displayDriversTable() {
     }
   });
 
-  /*$('#driversTable').DataTable({
-    "order": [[ 3, "desc" ]], //or asc 
-    "columnDefs" : [{"targets":3, "type":"date-eu"}],
-});*//*
-table = $('#driversTable').DataTable( {
-  
-  retrieve: true,
-  paging: false,
-  "order": [[ 3, "desc" ]], //or asc 
-  "columnDefs" : [{"targets":3, "type":"date-eu"}],
-} );*/
+
  $(document).ready(function () {
     $("#driversTable").DataTable({
   
         retrieve: true,
         paging: true,
-        "order": [[ 3, "desc" ]], //or asc 
+        "order": [[ 3, "desc" ]], 
         "columnDefs" : [{"targets":3, "type":"date-eu"}],
       
     });
